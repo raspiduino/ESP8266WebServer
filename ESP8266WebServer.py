@@ -34,7 +34,7 @@ def begin(port=80):
     """Function to start http server
     """
     global server, poller
-    server.bind(('0.0.0.0', port))
+    server.bind(('', port))
     server.listen(1)
     # Register for checking new client connection
     poller.register(server, uselect.POLLIN)
